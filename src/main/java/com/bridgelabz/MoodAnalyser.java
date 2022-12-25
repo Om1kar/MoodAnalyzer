@@ -3,13 +3,8 @@ package com.bridgelabz;
 public class MoodAnalyser {
     private String message;
 
-    public MoodAnalyser() {}
-    /*
-    Refactor->MoodAnalyser will have 2 Constructors –
-              Default - MoodAnalyser() and with
-              Parameters – MoodAnalyser(message)
-     */
-   public MoodAnalyser(String message) {
+    //public MoodAnalyser() {}
+    public MoodAnalyser(String message) {
             this.message = message;
         }
         public String analyseMood () {
