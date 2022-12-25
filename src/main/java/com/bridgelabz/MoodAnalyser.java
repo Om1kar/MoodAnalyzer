@@ -6,19 +6,18 @@ public class MoodAnalyser {
     public MoodAnalyser(String message) {
         this.message = message;
     }
-
-    public String analyseMood() {
-        if (this.message.contains("sad")) {
-            return "SAD";
-        } else
-            return "HAPPY";
+    public MoodAnalyser(){
+        this.message = null;
     }
-
-    public static void main(String[] args) {
-        MoodAnalyser moodAnalyser1 = new MoodAnalyser("I am Happy");
-        System.out.println(moodAnalyser1.analyseMood());
-        MoodAnalyser moodAnalyser2 = new MoodAnalyser("I am Sad");
-        System.out.println(moodAnalyser2.analyseMood());
+    public String analyseMood() {
+        try {
+            if (this.message.contains("sad"))
+                return "SAD";
+            else
+                return "HAPPY";
+        } catch (NullPointerException e){
+            return "HAPPY";
+        }
     }
 }
 
