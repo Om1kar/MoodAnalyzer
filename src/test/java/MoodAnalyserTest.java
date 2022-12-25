@@ -4,9 +4,15 @@ import org.testng.annotations.Test;
 import static org.junit.jupiter.api.Assertions.assertSame;
 public class MoodAnalyserTest {
     @Test
-    public void moodAnalyser() {
-        MoodAnalyser analyse = new MoodAnalyser("I am in sad mood");
-        String mood = analyse.analyseMood();
-        assertSame("SAD", mood);
+    public void moodReturnSad() {
+        MoodAnalyser analyse = new MoodAnalyser();
+        String moodAnalyser = analyse.analyseMood("I am in SAD Mood");
+        assertSame("SAD", moodAnalyser);
+    }
+    @Test
+    public void moodShouldReturnHappy(){
+        MoodAnalyser analyse = new MoodAnalyser();
+        String moodAnalyser = analyse.analyseMood("I am in any Mood");
+        assertSame("HAPPY",moodAnalyser);
     }
 }
