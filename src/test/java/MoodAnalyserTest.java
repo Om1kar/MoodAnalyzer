@@ -1,9 +1,7 @@
 import com.bridgelabz.MoodAnalyser;
 import org.testng.annotations.Test;
 
-
 import static org.junit.jupiter.api.Assertions.assertSame;
-
 public class MoodAnalyserTest {
     @Test
     public void moodAnalyser() {

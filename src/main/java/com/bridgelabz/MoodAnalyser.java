@@ -12,7 +12,6 @@ public class MoodAnalyser {
         }else
             return "HAPPY";
     }
-
     public static void main(String[] args) {
         MoodAnalyser moodAnalyser = new MoodAnalyser("i am sad");
         System.out.println(moodAnalyser.analyseMood());
