@@ -9,4 +9,10 @@ public class MoodAnalyserTest {
         String moodAnalyser = analyse.analyseMood();
         assertSame("SAD", moodAnalyser);
     }
+    @Test
+    public void moodReturnHappy(){
+        MoodAnalyser analyse = new MoodAnalyser("I am in any mood");
+        String moodAnalyser = analyse.analyseMood();
+        assertSame("HAPPY",moodAnalyser);
+    }
 }
